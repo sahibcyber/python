@@ -19,7 +19,8 @@ except Exception as e:
     print("bir xeeta var") 
 else:
     print("netice")
-finally("bura her zaman isleyecek hissedir") 
+finally:
+    print("bura her zaman isleyecek hissedir") 
 
 
 
