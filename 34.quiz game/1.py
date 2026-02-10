@@ -1,4 +1,4 @@
-def yeni_oyuncu():
+def yeni_oyun():
     texminler = []
     dogru_texminler = 0 
     sualin_nomresi = 1 
@@ -10,13 +10,13 @@ def yeni_oyuncu():
             print(i)
         texminler = input("daxil edin (A, B, C veya D): ")
         texmin = texmin.upper()
-        texminler.append (texmin)
+        texminler.append(texmin)
         dogru_texminler += suali_yoxla(sual.get(acarlar), texmin)
         sualin_nomresi += 1
     xal_goster(dogru_texminler, texminler)
 
-def suali_yoxla(dogruCavab, bizimtexminimiz):
-    if dogruCavab == bizimtexminimiz:
+def suali_yoxla(dogruCavab, bizimTexminimiz):
+    if dogruCavab == bizimTexminimiz:
         print("dogru")
         return 1 
     else:
@@ -38,10 +38,10 @@ def xal_goster(dogru_cavablar, texminlerimiz):
     print()
 
     derece = int((dogru_cavablar/len(sual)) * 100)
-    print("dogru texmin derex=cemiz: " + str(derece) + "%")
+    print("dogru texmin dercemiz: " + str(derece) + "%")
 
 def yeniden_oyna():
-    sorgu = input("yeniden oynamaq isteyirsen mi? (beli / xeyr) : ").upper()
+    sorgu = input("yeniden oynamaq isteyirsen mi? (Beli / Xeyr) : ").upper()
     if sorgu == "BELI":
         return True
     else:
@@ -59,12 +59,11 @@ cavablar = [
     ["A. Lonely Ialand",             "B. Simosh",             "C. Monty python",          "D. SNL"],
     ["A. True",                      "B. False",              "C. Sometimes",             "D. What's Earth"],
 ]
-
 yeni_oyun()
 
 
 while yeniden_oyna():
-    yeniden_oyun()
+    yeni_oyun()
 
 
 print("sagol!!!!!!") 
